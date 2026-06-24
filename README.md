@@ -33,8 +33,8 @@ npm 安装分为两步：
 
 ```bash
 cd writing-hf-weekly-digest
-npm install -g .
-hf-weekly-skill install
+sudo npm install -g .
+sudo hf-weekly-skill install
 ```
 
 默认安装位置：
@@ -51,7 +51,7 @@ hf-weekly-skill install
 
 ```bash
 cd writing-hf-weekly-digest
-npm pack
+sudo npm pack
 ```
 
 然后安装生成的包：
@@ -100,8 +100,8 @@ hf-weekly-skill install --force
 先更新 npm 包，再更新 Codex 中的 Skill：
 
 ```bash
-npm install -g .
-hf-weekly-skill update
+sudo npm install -g .
+sudo hf-weekly-skill update
 ```
 
 `update` 使用临时目录和备份进行原子替换；失败时会恢复旧版本。
