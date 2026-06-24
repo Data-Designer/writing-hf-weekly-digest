@@ -56,8 +56,8 @@ npm pack
 然后安装生成的包：
 
 ```bash
-sudo npm install -g ./writing-hf-weekly-digest-1.0.0.tgz
-sudo hf-weekly-skill install
+npm install -g ./writing-hf-weekly-digest-1.0.0.tgz
+hf-weekly-skill install
 ```
 
 ## 从 npm Registry 安装
@@ -65,11 +65,14 @@ sudo hf-weekly-skill install
 包发布到 npm Registry 后可以使用：
 
 ```bash
-sudo npm install -g writing-hf-weekly-digest
-sudo hf-weekly-skill install
+npm install -g writing-hf-weekly-digest
+hf-weekly-skill install
 ```
 
 当前仓库提供的是可发布 npm 包结构；是否发布到公共 Registry 由维护者决定。
+
+不要使用 `sudo hf-weekly-skill install`，否则可能把 Skill 安装到 root 用户目录，
+或生成当前用户无法更新的文件。
 
 ## CLI 命令
 
@@ -142,12 +145,109 @@ hf-weekly-skill install --target /absolute/path/to/skills
 
 ## 使用方式
 
-安装后，可以在 Codex 中提出类似请求：
+### 第一步：确认 Skill 已安装
+
+```bash
+hf-weekly-skill path
+```
+
+默认应输出：
+
+```text
+/Users/你的用户名/.codex/skills/writing-hf-weekly-digest
+```
+
+确认该目录中存在 `SKILL.md`，然后重启 Codex 或新建一个会话。
+
+### 第二步：在 Codex 中触发 Skill
+
+最明确的调用方式是在请求中直接写出 Skill 名称：
 
 ```text
 使用 writing-hf-weekly-digest，总结 2026-W26 的 Hugging Face Papers，
 生成一篇图文并茂的中文微信公众号文章。
 ```
+
+也可以使用自然语言触发：
+
+```text
+帮我写本周 Hugging Face Papers 中文周报，要详细、图文并茂，
+可以直接发布到微信公众号。
+```
+
+### 常用提示词
+
+#### 总结上周论文
+
+```text
+使用 writing-hf-weekly-digest，总结上周 Hugging Face Daily Papers，
+筛选最重要的论文并生成中文周报。
+```
+
+未指定日期时，Skill 默认优先处理最近一个已经完整结束的 ISO 自然周。
+
+#### 指定自然周和编辑风格
+
+```text
+使用 writing-hf-weekly-digest，总结 2026-W26 的论文。
+采用 PaperScope 风格，重点分析 Agent、World Model 和端侧模型。
+```
+
+#### 生成完整微信公众号文章
+
+```text
+使用 writing-hf-weekly-digest，分析 2026-06-22 至 2026-06-28 的 HF Papers。
+
+要求：
+1. 筛选 10–15 篇代表论文；
+2. 使用论文原始 framework 图片，而不是生成示意图；
+3. 生成微信公众号 HTML；
+4. 包含数据口径、完整引用和事实审计；
+5. 作者写 Chuang Zhao & GPT-5 Codex。
+```
+
+#### 只生成简洁研究情报
+
+```text
+使用 writing-hf-weekly-digest，整理本周 HF Papers。
+使用 research-intel 模式，只输出主题趋势、重点论文、关键数字和风险信号。
+```
+
+#### 修改已有文章
+
+```text
+使用 writing-hf-weekly-digest，检查这个周报目录。
+补充论文原图、完整引用和证据审计，然后重新生成 digest-wechat.html。
+```
+
+### 默认产物
+
+完整发布模式通常生成：
+
+```text
+digest.md
+digest-wechat.html
+audit.md
+papers.json
+source.json
+editorial.json
+assets/
+  manifest.json
+  papers/
+```
+
+- `digest.md`：文章 Markdown 原稿；
+- `digest-wechat.html`：微信友好 HTML；
+- `audit.md`：数据口径、证据账本和限制；
+- `papers.json`、`source.json`：冻结后的论文数据；
+- `editorial.json`：编辑与视觉配置；
+- `assets/`：原创编辑图和来自论文本身的图片。
+
+### 可选模式
+
+- `research-intel`：简洁研究情报；
+- `publication-grade`：详细、图文并茂的通用发布稿；
+- `paperscope-editorial`：五条主题主线、观点更鲜明的中文科技媒体稿。
 
 Skill 会根据任务读取：
 
