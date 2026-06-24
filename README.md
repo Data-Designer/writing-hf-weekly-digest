@@ -380,3 +380,9 @@ hf-weekly-skill path
 
 `update` 和 `install --force` 会完整替换目标 Skill。若修改过已安装文件，请先备份，
 或者直接在本 npm 包源码中修改、测试，再重新安装。
+
+
+
+### Acknowledgement
+
+感谢PaperScope的Idea。
