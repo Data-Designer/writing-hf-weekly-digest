@@ -1,0 +1,83 @@
+{
+  "title": "Agent 不缺大脑，开始缺操作系统了",
+  "subtitle": "本周 89 篇 HF Papers：5 大主线，13 篇代表论文",
+  "period": "2026-06-22—2026-06-24 · 部分周",
+  "include_originals": [
+    "cover.svg",
+    "daily-counts.svg"
+  ],
+  "themes": [
+    {
+      "name": "评测与可靠性",
+      "papers": 6,
+      "upvotes": 220
+    },
+    {
+      "name": "运行时与记忆",
+      "papers": 6,
+      "upvotes": 188
+    },
+    {
+      "name": "可验证训练数据",
+      "papers": 4,
+      "upvotes": 124
+    },
+    {
+      "name": "环境模拟",
+      "papers": 3,
+      "upvotes": 104
+    },
+    {
+      "name": "架构与推理效率",
+      "papers": 5,
+      "upvotes": 184
+    }
+  ],
+  "pipeline": [
+    "暴露失败",
+    "记录状态",
+    "模拟环境",
+    "学习恢复"
+  ],
+  "paper_diagrams": [
+    {
+      "paper_id": "2606.22388",
+      "title": "PlanBench-XL：工具越多，恢复越重要",
+      "subtitle": "Agent 必须在不可见、会失效的工具生态里完成长程规划",
+      "steps": [
+        "检索工具",
+        "执行调用",
+        "遭遇阻断",
+        "重新规划"
+      ],
+      "takeaway": "真正拉开差距的不是正常路径，而是无明确报错时能否找到替代路径",
+      "caption": "图5：PlanBench-XL 的评测闭环。来源：根据论文机制原创绘制。"
+    },
+    {
+      "paper_id": "2606.24597",
+      "title": "Qwen-AgentWorld：先预测环境，再决定行动",
+      "subtitle": "语言世界模型把真实交互轨迹压缩成可控的训练环境",
+      "steps": [
+        "当前状态",
+        "Agent 动作",
+        "预测反馈",
+        "模拟训练"
+      ],
+      "takeaway": "环境模型不只是降低成本，更重要的是批量制造真实世界里罕见的困难状态",
+      "caption": "图6：Qwen-AgentWorld 的环境模拟逻辑。来源：根据论文机制原创绘制。"
+    },
+    {
+      "paper_id": "2606.19409",
+      "title": "OpenRath：把 Session 变成运行时对象",
+      "subtitle": "对话、工具、沙箱、记忆和分支来源不再散落在外部日志中",
+      "steps": [
+        "统一记录",
+        "显式分支",
+        "合并状态",
+        "重放审计"
+      ],
+      "takeaway": "没有可重放的状态对象，Agent 出错后只能靠猜；有了 Session 才能真正调试",
+      "caption": "图7：Session 中心的 Agent 运行时。来源：根据论文机制原创绘制。"
+    }
+  ]
+}

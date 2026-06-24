@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="680" viewBox="0 0 1080 680">
+<title>Agent 不缺大脑，开始缺操作系统了</title>
+<rect width="1080" height="680" fill="#fffdf9"/>
+<style>
+text { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Noto Sans CJK SC", Arial, sans-serif; }
+.title { font-size: 48px; font-weight: 800; fill: #1c1917; }
+.subtitle { font-size: 25px; fill: #78716c; }
+.label { font-size: 25px; fill: #1c1917; }
+.small { font-size: 20px; fill: #78716c; }
+.value { font-size: 30px; font-weight: 800; fill: #e8590c; }
+</style>
+
+<rect x="0" y="0" width="18" height="680" fill="#e8590c"/>
+<circle cx="905" cy="140" r="150" fill="#e8590c" opacity=".12"/>
+<circle cx="940" cy="160" r="92" fill="#e8590c" opacity=".18"/>
+<text x="74" y="92" font-size="22" font-weight="800" letter-spacing="5" fill="#e8590c">HF PAPERS · WEEKLY SIGNAL</text>
+<text x="74" y="230" class="title">Agent</text><text x="74" y="304" class="title">不缺大脑，开始缺操作系统了</text>
+<text x="76" y="505" class="subtitle">本周 89 篇 HF Papers：5 大主线，13 篇代表论文</text>
+<line x1="76" y1="545" x2="210" y2="545" stroke="#e8590c" stroke-width="6"/>
+<text x="76" y="605" class="small">2026-06-22—2026-06-24 · 部分周</text>
+<text x="840" y="594" font-size="72" font-weight="900" fill="#14213d" opacity=".92">AI</text>
+
+</svg>
