@@ -56,8 +56,8 @@ npm pack
 然后安装生成的包：
 
 ```bash
-npm install -g ./writing-hf-weekly-digest-1.0.0.tgz
-hf-weekly-skill install
+sudo npm install -g ./writing-hf-weekly-digest-1.0.0.tgz
+sudo hf-weekly-skill install
 ```
 
 ## 从 npm Registry 安装
