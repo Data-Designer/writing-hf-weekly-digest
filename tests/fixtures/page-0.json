@@ -1,0 +1,27 @@
+[
+  {
+    "paper": {
+      "id": "2606.00001",
+      "title": "Agent Evaluation One",
+      "authors": [{"name": "A. Author"}, {"name": "B. Author"}],
+      "publishedAt": "2026-06-08T00:00:00.000Z",
+      "submittedOnDailyAt": "2026-06-09T00:00:00.000Z",
+      "summary": "A benchmark for agents.",
+      "ai_summary": "Evaluates agents.",
+      "upvotes": 12,
+      "githubRepo": "https://github.com/example/agent-one",
+      "projectPage": "https://example.com/agent-one"
+    }
+  },
+  {
+    "paper": {
+      "id": "2606.00002",
+      "title": "World Model Memory",
+      "authors": [{"name": "C. Author"}],
+      "publishedAt": "2026-06-10T00:00:00.000Z",
+      "submittedOnDailyAt": "2026-06-11T00:00:00.000Z",
+      "summary": "A memory for world models.",
+      "upvotes": 7
+    }
+  }
+]

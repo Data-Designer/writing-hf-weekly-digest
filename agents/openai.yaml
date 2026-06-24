@@ -1,0 +1,4 @@
+interface:
+  display_name: "HF Papers Weekly Digest"
+  short_description: "Create sharp visual HF Papers editorial publications"
+  default_prompt: "Use $writing-hf-weekly-digest in paperscope-editorial mode to create a thesis-driven illustrated Chinese HF Papers article with five themes, WeChat HTML, visuals, and evidence audit."

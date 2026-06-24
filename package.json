@@ -1,0 +1,38 @@
+{
+  "name": "writing-hf-weekly-digest",
+  "version": "1.0.0",
+  "description": "Codex Skill for publication-ready Chinese Hugging Face and arXiv weekly paper digests.",
+  "license": "UNLICENSED",
+  "type": "commonjs",
+  "bin": {
+    "hf-weekly-skill": "bin/hf-weekly-skill.js"
+  },
+  "files": [
+    "SKILL.md",
+    "README.md",
+    "agents",
+    "bin",
+    "references",
+    "scripts",
+    "!scripts/**/__pycache__/**",
+    "!scripts/**/*.pyc"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test:node": "node --test tests/npm-installer.test.js",
+    "test:python": "python3 -m unittest discover -s tests -p 'test_*.py'",
+    "test": "npm run test:node && npm run test:python",
+    "pack:check": "npm pack --dry-run"
+  },
+  "keywords": [
+    "codex",
+    "skill",
+    "huggingface",
+    "arxiv",
+    "papers",
+    "weekly-digest",
+    "wechat"
+  ]
+}

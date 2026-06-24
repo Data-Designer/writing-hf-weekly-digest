@@ -1,0 +1,24 @@
+[
+  {
+    "paper": {
+      "id": "2606.00002",
+      "title": "World Model Memory",
+      "authors": [{"name": "C. Author"}],
+      "publishedAt": "2026-06-10T00:00:00.000Z",
+      "submittedOnDailyAt": "2026-06-11T00:00:00.000Z",
+      "summary": "Duplicate entry.",
+      "upvotes": 7
+    }
+  },
+  {
+    "paper": {
+      "id": "2606.00003",
+      "title": "Outside Requested Week",
+      "authors": [{"name": "D. Author"}],
+      "publishedAt": "2026-06-14T00:00:00.000Z",
+      "submittedOnDailyAt": "2026-06-15T00:00:00.000Z",
+      "summary": "Submitted after the requested week.",
+      "upvotes": 100
+    }
+  }
+]
