@@ -14,6 +14,7 @@
 - npm；
 - Python 3.10 或更高版本；
 - Codex 桌面版或其他支持本地 Skills 的 Codex 环境。
+- ==注意安装失败请用sudo权限==
 
 运行时 Python 脚本仅使用标准库，不需要额外执行 `pip install`。
 
@@ -56,8 +57,8 @@ npm pack
 然后安装生成的包：
 
 ```bash
-npm install -g ./writing-hf-weekly-digest-1.0.0.tgz
-hf-weekly-skill install
+sudo npm install -g ./writing-hf-weekly-digest-1.0.0.tgz
+sudo hf-weekly-skill install
 ```
 
 ## 从 npm Registry 安装
@@ -65,8 +66,8 @@ hf-weekly-skill install
 包发布到 npm Registry 后可以使用：
 
 ```bash
-npm install -g writing-hf-weekly-digest
-hf-weekly-skill install
+sudo npm install -g writing-hf-weekly-digest
+sudo hf-weekly-skill install
 ```
 
 当前仓库提供的是可发布 npm 包结构；是否发布到公共 Registry 由维护者决定。
