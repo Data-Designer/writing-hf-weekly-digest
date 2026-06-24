@@ -65,8 +65,8 @@ sudo hf-weekly-skill install
 包发布到 npm Registry 后可以使用：
 
 ```bash
-npm install -g writing-hf-weekly-digest
-hf-weekly-skill install
+sudo npm install -g writing-hf-weekly-digest
+sudo hf-weekly-skill install
 ```
 
 当前仓库提供的是可发布 npm 包结构；是否发布到公共 Registry 由维护者决定。
